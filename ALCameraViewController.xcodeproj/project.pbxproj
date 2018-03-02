@@ -10,6 +10,8 @@
 		1F3C56291F701CA7009667E9 /* CroppingParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC96FA11F5B5166003E53F4 /* CroppingParameters.swift */; };
 		7AC96FA21F5B5166003E53F4 /* CroppingParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC96FA11F5B5166003E53F4 /* CroppingParameters.swift */; };
 		7C6AF41F1FB340CA006CB4ED /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C6AF41E1FB340CA006CB4ED /* LaunchScreen.xib */; };
+		9E3FAB5720485EDD005FFC93 /* CameraViewPL.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9E3FAB5620485EDD005FFC93 /* CameraViewPL.strings */; };
+		9E3FAB5820485EDD005FFC93 /* CameraViewPL.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9E3FAB5620485EDD005FFC93 /* CameraViewPL.strings */; };
 		C40665441C73A47C00EB9751 /* SingleImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40665431C73A47C00EB9751 /* SingleImageSaver.swift */; };
 		C40665461C73A94100EB9751 /* CameraGlobals.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40665451C73A94100EB9751 /* CameraGlobals.swift */; };
 		C40665481C73B72D00EB9751 /* SingleImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40665471C73B72D00EB9751 /* SingleImageFetcher.swift */; };
@@ -63,6 +65,7 @@
 /* Begin PBXFileReference section */
 		7AC96FA11F5B5166003E53F4 /* CroppingParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CroppingParameters.swift; sourceTree = "<group>"; };
 		7C6AF41E1FB340CA006CB4ED /* LaunchScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		9E3FAB5620485EDD005FFC93 /* CameraViewPL.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = CameraViewPL.strings; sourceTree = "<group>"; };
 		C40665431C73A47C00EB9751 /* SingleImageSaver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleImageSaver.swift; sourceTree = "<group>"; };
 		C40665451C73A94100EB9751 /* CameraGlobals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraGlobals.swift; sourceTree = "<group>"; };
 		C40665471C73B72D00EB9751 /* SingleImageFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleImageFetcher.swift; sourceTree = "<group>"; };
@@ -190,6 +193,7 @@
 				FAB50BEA1B413E41009905B9 /* ViewController */,
 				FAB50BEB1B413E4E009905B9 /* Views */,
 				FA8231371B3BF8F700A837BE /* CameraView.strings */,
+				9E3FAB5620485EDD005FFC93 /* CameraViewPL.strings */,
 				FA5FA3441B3AFEB300497C62 /* CameraViewAssets.xcassets */,
 			);
 			path = ALCameraViewController;
@@ -313,6 +317,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E3FAB5820485EDD005FFC93 /* CameraViewPL.strings in Resources */,
 				C482A0141CAEB1B100541D08 /* CameraView.strings in Resources */,
 				C482A0151CAEB1B100541D08 /* CameraViewAssets.xcassets in Resources */,
 				C4768C011CAF2EAA00A084F8 /* ConfirmViewController.xib in Resources */,
@@ -327,6 +332,7 @@
 				FA8231381B3BF8F700A837BE /* CameraView.strings in Resources */,
 				7C6AF41F1FB340CA006CB4ED /* LaunchScreen.xib in Resources */,
 				FA5FA3451B3AFEB300497C62 /* CameraViewAssets.xcassets in Resources */,
+				9E3FAB5720485EDD005FFC93 /* CameraViewPL.strings in Resources */,
 				FAF0584C1B31618D008E5592 /* Images.xcassets in Resources */,
 				FA778A411B8319D8005807E7 /* image.jpg in Resources */,
 				C4768C001CAF2EA100A084F8 /* ConfirmViewController.xib in Resources */,

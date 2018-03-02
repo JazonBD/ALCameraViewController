@@ -1,0 +1,18 @@
+/* 
+  CameraViewPL.strings
+  ALCameraViewController
+
+  Created by Jazon Bronikowski on 3/1/18.
+  Copyright © 2018 zero. All rights reserved.
+*/
+
+"permissions.title" = "Brak dostępu do kamery";
+"permissions.description" = "Zezwól na używanie zdjęć w ustawieniach prywatności";
+
+"permissions.library.title" = "Brak dostępu do zdjęć";
+"permissions.library.description" = "Zezwól na używanie aparatu w ustawieniach prywatności";
+
+"permissions.settings" = "Ustawienia";
+
+"error.cant-fetch-photo" = "Nie można pobrać zdjęcia";
+"error.cant-fetch-photo.description" = "Sprawdź ustawienia sieci";

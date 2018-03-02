@@ -21,7 +21,22 @@ internal func localizedString(_ key: String) -> String {
         return CameraGlobals.shared.bundle
     }
 
-    return NSLocalizedString(key, tableName: CameraGlobals.shared.stringsTable, bundle: bundle, comment: key)
+    guard let language = Locale.current.languageCode else {
+        
+        return NSLocalizedString(key, tableName: CameraGlobals.shared.stringsTable, bundle: bundle, comment: key)
+        
+    }
+    
+    if language == "pl" {
+        
+        return NSLocalizedString(key, tableName: CameraGlobals.shared.stringsTablePolish, bundle: bundle, comment: key)
+        
+    } else {
+        
+        return NSLocalizedString(key, tableName: CameraGlobals.shared.stringsTable, bundle: bundle, comment: key)
+    }
+    
+    
 }
 
 internal func currentRotation(_ oldOrientation: UIInterfaceOrientation, newOrientation: UIInterfaceOrientation) -> CGFloat {
