@@ -14,58 +14,66 @@ internal func radians(_ degrees: CGFloat) -> CGFloat {
 }
 
 internal func localizedString(_ key: String) -> String {
+    
+    var languageCode: String? {
+        
+        return Locale.current.languageCode
+        
+    }
+    
+    var resource: String {
+        
+        if languageCode == "pl" {
+            
+            return CameraGlobals.shared.stringsTablePolish
+            
+        } else {
+            
+            return CameraGlobals.shared.stringsTable
+        }
+        
+    }
+    
     var bundle: Bundle {
-        if Bundle.main.path(forResource: CameraGlobals.shared.stringsTable, ofType: "strings") != nil {
+        
+        if Bundle.main.path(forResource: resource, ofType: "strings") != nil {
             return Bundle.main
         }
         return CameraGlobals.shared.bundle
     }
-
-    guard let language = Locale.current.languageCode else {
-        
-        return NSLocalizedString(key, tableName: CameraGlobals.shared.stringsTable, bundle: bundle, comment: key)
-        
-    }
     
-    if language == "pl" {
-        
-        return NSLocalizedString(key, tableName: CameraGlobals.shared.stringsTablePolish, bundle: bundle, comment: key)
-        
-    } else {
-        
-        return NSLocalizedString(key, tableName: CameraGlobals.shared.stringsTable, bundle: bundle, comment: key)
-    }
     
+    return NSLocalizedString(key, tableName: resource, bundle: bundle, comment: key)
     
 }
 
 internal func currentRotation(_ oldOrientation: UIInterfaceOrientation, newOrientation: UIInterfaceOrientation) -> CGFloat {
     switch oldOrientation {
-        case .portrait:
-            switch newOrientation {
-                case .landscapeLeft: return 90
-                case .landscapeRight: return -90
-                case .portraitUpsideDown: return 180
-                default: return 0
-            }
-            
-        case .landscapeLeft:
-            switch newOrientation {
-                case .portrait: return -90
-                case .landscapeRight: return 180
-                case .portraitUpsideDown: return 90
-                default: return 0
-            }
-            
-        case .landscapeRight:
-            switch newOrientation {
-                case .portrait: return 90
-                case .landscapeLeft: return 180
-                case .portraitUpsideDown: return -90
-                default: return 0
-            }
-            
+    case .portrait:
+        switch newOrientation {
+        case .landscapeLeft: return 90
+        case .landscapeRight: return -90
+        case .portraitUpsideDown: return 180
         default: return 0
+        }
+        
+    case .landscapeLeft:
+        switch newOrientation {
+        case .portrait: return -90
+        case .landscapeRight: return 180
+        case .portraitUpsideDown: return 90
+        default: return 0
+        }
+        
+    case .landscapeRight:
+        switch newOrientation {
+        case .portrait: return 90
+        case .landscapeLeft: return 180
+        case .portraitUpsideDown: return -90
+        default: return 0
+        }
+        
+    default: return 0
     }
 }
 
@@ -129,10 +137,10 @@ struct DeviceConfig {
     static let SCREEN_MULTIPLIER : CGFloat = {
         if UIDevice.current.userInterfaceIdiom == .phone {
             switch ScreenSize.SCREEN_MAX_LENGTH {
-                case 568.0: return 1.5
-                case 667.0: return 2.0
-                case 736.0: return 4.0
-                default: return 1.0
+            case 568.0: return 1.5
+            case 667.0: return 2.0
+            case 736.0: return 4.0
+            default: return 1.0
             }
         } else {
             return 1.0
